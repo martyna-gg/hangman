@@ -34,7 +34,7 @@ while decision != 'exit':
         print(hint + '\n')
 
         i = 0  # number of attempts (player has 8 attempts)
-        answears = [] #  list of chosen letters
+        answers = [] #  list of chosen letters
         while i < 8:
             correct = 0
             while correct < 3:
@@ -54,12 +54,12 @@ while decision != 'exit':
                     print(hint + '\n')
                     print('Please, enter a lowercase letter from the English alphabet.\n')
                     continue
-                if ans in answears:  # if it was not chosen before
+                if ans in answers:  # if it was not chosen before
                     print(hint + '\n')
                     print("You've already guessed this letter.\n")
                     continue
                 else:
-                    answears.append(ans)
+                    answers.append(ans)
                     correct += 1
             
             if ans not in game_choice:  # if choice is not correct
